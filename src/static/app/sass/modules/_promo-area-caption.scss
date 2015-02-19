@@ -1,0 +1,44 @@
+.promo-area-caption {
+
+	background-color: $blue-bg-color;
+	width: 100%;
+	display: inline-block;
+
+	padding: em-calc(17) em-calc(20);
+	margin: 0;
+
+	.promo-area-caption-heading,
+	h2,
+	p {
+		color: $white;
+		padding: 0;
+		margin: 0;
+	}
+
+	.promo-area-caption-heading,
+	h2 {
+		font-family: $serif;
+		font-size: em-calc(25);
+		line-height: 1.5em;
+	}
+
+	p {
+		font-family: $default-font;
+		font-size: em-calc(15);
+		line-height: 1.4em;
+	}
+
+	&.promo-area-caption-green {
+		background-color: $green-bg-color;
+	}
+	&.promo-area-caption-red {
+		background-color: $red-bg-color;
+	}
+	&.promo-area-caption-yellow {
+		background-color: $yellow-bg-color;
+		.promo-area-caption-heading {
+			color: $black;
+		}
+	}
+
+}

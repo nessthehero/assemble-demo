@@ -1,0 +1,80 @@
+.header-search {
+
+	width: 100%;
+	padding: 0.8em 0;
+	box-sizing: border-box;
+	position: relative;
+
+	@include box-shadow(rgba(0, 0, 0, 0.1) 0 0 9px 1px );
+
+	label {
+		display: none;
+	}
+
+	input[type='search'],
+	input[type='text'] {
+
+		background-color: #fff;
+		padding: 8px;
+		width: 100%;
+
+		@include bp(medium-up) {
+			padding: 4px;
+		}
+	}
+
+	&:before {
+		position: absolute;
+		display: inline-block;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		// border-bottom: 24px solid $gold;
+		left: 315px;
+		top: -14px;
+		content: '';
+	}
+
+	// Activate absolute positioning to place search bar in header
+	@media only screen and (min-width: 47.5em) {
+		position: absolute;
+		width: 15.6875em;
+	}
+
+	// Smaller logo and nav, align to left of nav
+	@media only screen and (min-width: 47.5em) and (max-width: 56.875em) {
+		top: 0;
+		left: 130px;
+	}
+
+	// Larger logo and nav, align to left of nav
+	@media only screen and (min-width: 56.875em) and (max-width: 75em) {
+		top: 0;
+		left: 173px;
+	}
+
+	// Float to right of navigation
+	@media only screen and (min-width: 75em) {
+		bottom: 0;
+		right: 18px;
+	}
+
+}
+
+.btn-search-small {
+	background-image: url(i/btn-search-small.png);
+	background-position: center center;
+	background-color: transparent !important;
+	font-size: 0 !important;
+	width: 22px;
+	height: 18px;
+	display: block;
+	position: absolute;
+	top: 24px;
+	right: 13px;
+	cursor: pointer;
+
+	@include bp(medium-up) {
+		top: 20px;
+		right: 7px;
+	}
+}

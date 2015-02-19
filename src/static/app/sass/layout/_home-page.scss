@@ -1,0 +1,20 @@
+.home-page {
+
+	.main {
+
+		.columns {
+			margin-bottom: $row-gutter;
+			@include bp (large-up) {
+				margin-bottom: 0;
+			}
+		}
+
+		.row {
+			@include bp (large-up) {
+				margin-bottom: $row-gutter;
+			}
+		}
+
+	}
+
+}

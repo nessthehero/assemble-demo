@@ -1,0 +1,32 @@
+.with-video {
+
+	.columns {
+		position: relative;
+	}
+
+	.video {
+		&:before {
+			position: absolute;
+			top: 66%;
+			left: 50%;
+			content: ' ';
+			display: block;
+
+			width: 83px;
+			height: 59px;
+			background-image: $play;
+
+			margin-left: -41px;
+			margin-top: -30px;
+
+			cursor: pointer;
+
+			@include layer(middle);
+
+			@include bp(large-up) {
+				top: 50%;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,18 @@
+.one-column {
+
+	.masthead-bottom {
+		margin-top: 2em;
+	}
+
+	.button-group {
+		margin-top: 2em;
+	}
+
+	h1 {
+		margin-top: 0.5em;
+		@include bp (medium-up) {
+			margin-top: 0;
+		}
+	}
+
+}

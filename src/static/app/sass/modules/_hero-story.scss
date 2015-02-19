@@ -1,0 +1,67 @@
+.hero-story {
+
+	position: relative;
+
+	a {
+
+		> img {
+			max-width: 100%;
+			height: auto;
+			position: absolute;
+		}
+
+		.hero-story-img {
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&:hover {
+			> span {
+				background-color: $dark-blue-bg-color;
+			}
+			.hero-story-title {
+				background-color: transparent;
+			}
+		}
+
+		@media only screen and (max-width: em-calc(700)) {
+			> img {
+				display: none;
+			}
+		}
+
+		@include bp (small-only) {
+
+			&.video {
+				&:before {
+					margin-top: -50px;
+				}
+			}
+
+			> span {
+				text-transform: uppercase;
+				width: 100%;
+				top: 0 !important;
+				left: 0 !important;
+			}
+
+		}
+
+		@include bp (medium-up) {
+			> img {
+				max-width: 100%;
+				width: auto;
+				height: auto;
+				position: absolute;
+			}
+			> span {
+				width: auto;
+				position: absolute;
+			}
+		}
+
+	}
+
+}

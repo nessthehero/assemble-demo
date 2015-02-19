@@ -1,0 +1,74 @@
+.hot-topics {
+
+	@extend %promo-area;
+
+	img {
+		width: 100%;
+		max-width: em-calc(265);
+		height: auto;
+	}
+
+	ul {
+		@extend %list-reset;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		margin-left: em-calc(25 / 2);
+		> li {
+			border-top: 1px solid $black; // Changed to solid because iOS sucks
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+
+	a {
+
+		@extend %transition-all;
+
+		font-family: $default-font;
+		font-size: em-calc(28 / 2);
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $carminePink;
+		padding: em-calc(25 / 2) em-calc(25) em-calc(25 / 2) 0;
+		display: block;
+		position: relative;
+
+		@include bp (medium-up) {
+			font-size: em-calc(16);
+		}
+
+		&:after {
+			@extend %transition-all;
+			background-image: url(i/icon-chevron.png);
+			background-repeat: no-repeat;
+			background-position: right center;
+			background-size: em-calc(21 / 2) em-calc(22 / 2);
+			position: absolute;
+			top: 39%;
+			right: em-calc(10);
+			width: em-calc(21 / 2);
+			height: em-calc(22 / 2);
+			content: "";
+			display: block;
+		}
+
+	}
+
+	a:link,
+	a:visited {
+		text-decoration: none;
+	}
+	a:hover {
+		color: $blue-bg-color;
+		text-decoration: underline;
+		&:after {
+			right: em-calc(5);
+		}
+	}
+
+	&.hot-topics-small {
+		margin-top: 2em;
+	}
+
+}

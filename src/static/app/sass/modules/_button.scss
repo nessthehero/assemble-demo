@@ -1,0 +1,44 @@
+.button {
+
+	background-color: $button-bg-color;
+	font-family: $default-font;
+	color: $white;
+	padding: 0.5em 1.5em 0.5em 1.5em;
+	// padding-left: 1em;
+	// padding-right: 1rem;
+
+	&:link {
+		@extend %transition-all;
+		color: $white;
+		text-decoration: none;
+	}
+	&:visited {
+		color: $white;
+	}
+	&:hover {
+		background-color: darken($button-bg-color, 10%);
+	}
+
+	&.button-alt {
+		background-color: $button-alt-bg-color;
+		color: $black;
+		&:hover {
+			background-color: lighten($button-alt-bg-color, 10%);
+		}
+	}
+
+	&.bold {
+		font-weight: 700;
+	}
+
+	&.half {
+		width: 49%;
+	}
+
+	&.image {
+		background-color: $white;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+}

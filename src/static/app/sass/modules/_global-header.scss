@@ -1,0 +1,246 @@
+.global-header {
+
+	position: relative;
+
+	@include layer(tippy-top);
+
+	img {
+
+		margin-top: em-calc(25);
+		width: em-calc(175px / 2px);
+		height: auto;
+
+		@include bp (medium-up) {
+			width: em-calc(88);
+		}
+
+		@include bp (xlarge-up) {
+			width: em-calc(120);
+		}
+
+	}
+
+	ul {
+		@extend %list-reset;
+		> li {
+			@include bp (medium-up) {
+				border-left: 1px solid #e0e0e0;
+				float: left;
+			}
+		}
+	}
+
+	.global-navigation-toggle-btn {
+
+		@extend %transition-all;
+
+		background-color: $blue-bg-color;
+		background-image: url(i/icon-menu.png);
+		background-repeat: no-repeat;
+		background-size: em-calc(44 / 2) em-calc(38 / 2);
+		background-position: right em-calc(13);
+
+		font-family: $nav-font;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $white;
+
+		border-right: 1em solid transparent;
+		padding-left: em-calc(20);
+		padding-right: em-calc(30);
+		margin-top: em-calc(40);
+		float: right;
+		display: none;
+
+		.js & {
+			display: block;
+		}
+
+		@include bp (medium-up) {
+			display: none !important;
+		}
+
+	}
+
+	.global-navigation {
+
+		@extend %transition-all-slow;
+
+		//padding-right: em-calc(30);
+		width: 100%;
+		position: absolute;
+
+		top: em-calc(100);
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		@include bp (medium-up) {
+			padding-right: 0;
+			width: auto;
+			bottom: 0;
+			top: auto !important;
+			left: em-calc(130);
+			display: block !important;
+			visibility: visible !important;
+		}
+
+		@include bp (xlarge-up) {
+			left: em-calc(175);
+		}
+
+		.js & {
+			top: em-calc(90);
+			visibility: hidden;
+		}
+
+	}
+
+	.global-navigation-button {
+
+		@extend %transition-all;
+
+		background-color: $dark-blue-bg-color;
+		font-family: $nav-font;
+		font-weight: 900;
+		font-size: em-calc(17);
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $white;
+		opacity: 0;
+		border-top: 1px solid #3248aa;
+		border-bottom: 1px solid #1e2c84;
+		padding: em-calc(14) em-calc(17);
+		display: block;
+
+		&.global-navigation-button-secondary {
+			background-color: $blue-bg-color;
+			border-top: none;
+			border-bottom: none;
+			@include bp (medium-up) {
+				display: none;
+			}
+			> span {
+				font-weight: normal;
+			}
+		}
+
+		@include bp (medium-up) {
+			background-color: transparent;
+			font-size: em-calc(15);
+			line-height: 1.2em;
+			color: $gravel;
+			border-top: none;
+			border-bottom: none;
+			padding: em-calc(2) em-calc(10);
+			opacity: 1;
+			&:hover,
+			&.is-active {
+				background-color: $dark-blue-bg-color;
+				color: $white;
+			}
+			.lt-ie9 & {
+				font-size: em-calc(14);
+			}
+		}
+
+		@include bp (large-up) {
+			padding-right: em-calc(15);
+			padding-left: em-calc(15);
+		}
+
+		// @include bp (xlarge-up) {
+		// 	padding-right: em-calc(20);
+		// 	padding-left: em-calc(20);
+		// }
+
+		@include bp (xxlarge-up) {
+			font-size: em-calc(17);
+			padding: em-calc(15) em-calc(20);
+			.lt-ie9 & {
+				font-size: em-calc(14);
+			}
+		}
+
+	}
+
+	.global-navigation-button-break {
+		@include bp (medium-up) {
+			display: block;
+			clear: both;
+		}
+	}
+
+	.for-parents-button {
+
+		//@extend %hide-text;
+		text-indent: -9999px;
+
+		background-image: url(i/btn-from-parents.png);
+		background-repeat: no-repeat;
+		width: em-calc(126);
+		height: em-calc(41);
+		position: absolute;
+		top: 0;
+		right: em-calc(5);
+		display: none;
+
+		&:hover {
+			background-position: 0 em-calc(-41);
+		}
+
+		@include bp (medium-up) {
+			display: block;
+		}
+
+	}
+
+	&.is-open {
+
+		.global-navigation-toggle-btn {
+			background-color: $dark-blue-bg-color;
+			padding-bottom: 5em;
+		}
+
+		.global-navigation {
+			top: em-calc(100);
+			visibility: visible;
+		}
+
+		ul {
+			> li {
+				.global-navigation-button {
+					opacity: 1;
+				}
+			}
+			> li + li {
+				.global-navigation-button {
+					transition-delay: 0.02s;
+				}
+			}
+			> li + li + li {
+				.global-navigation-button {
+					transition-delay: 0.04s;
+				}
+			}
+			> li + li + li + li {
+				.global-navigation-button {
+					transition-delay: 0.06s;
+				}
+			}
+			> li + li + li + li + li {
+				.global-navigation-button {
+					transition-delay: 0.08s;
+				}
+			}
+			> li + li + li + li + li + li {
+				.global-navigation-button {
+					transition-delay: 0.10s;
+				}
+			}
+		}
+
+	}
+
+}

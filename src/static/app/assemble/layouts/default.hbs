@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>CCFA Kids and Teens - {{ title }}</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic|Cardo" rel="stylesheet" type="text/css" />
+
+		<!-- build:css css/main.css -->
+		<link rel="stylesheet" href="bower_components/bolster.bxSlider/jquery.bxslider.css" />
+		<link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<!-- endbuild -->
+
+		<!-- build:js js/plugins/respond.js -->
+		<script src="bower_components/respond/dest/respond.src.js"></script>
+		<!-- endbuild -->
+
+		<!-- build:js js/plugins/modernizr.js -->
+		<script src="js/plugins/modernizr.optimized.js"></script>
+		<!-- endbuild -->
+
+	</head>
+	<body class="{{body-class}}">
+
+		{{> _global-header }}
+
+		<article class="main row" role="main">
+
+			{{ body }}
+
+		</article>
+
+		{{> _global-footer }}
+
+		<!-- build:js js/main.js -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/jquery-unveil/jquery.unveil.js"></script>
+		<script src="js/ccfa.main.js"></script>
+		<!-- endbuild -->
+
+	</body>
+</html>

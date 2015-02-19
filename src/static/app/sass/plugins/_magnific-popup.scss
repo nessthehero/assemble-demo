@@ -1,0 +1,12 @@
+.mfp-iframe-holder {
+
+	.mfp-close {
+		right: 0;
+		&:hover {
+			background: $dark-blue-bg-color;
+			top: -45px;
+			right: 0;
+		}
+	}
+
+}

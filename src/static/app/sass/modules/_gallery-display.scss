@@ -1,0 +1,17 @@
+// Ian
+.gallery-display {
+
+	@extend %promo-area;
+
+	#js-instafeed-loader {
+		.no-js & {
+			display: none;
+		}
+	}
+
+	.gallery-image {
+		width: 50%;
+		float: left;
+	}
+
+}

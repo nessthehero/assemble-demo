@@ -1,0 +1,39 @@
+.promo-content {
+
+	@extend %promo-area;
+
+	position: relative;
+
+	.pds-box {
+		width: 100% !important;
+	}
+
+	.promo-content-area {
+
+		padding: 0.75em 0.75em 2em 0.75em;
+		border-width: 0 1px 1px 1px;
+		border-style: solid;
+		border-color: $light-border;
+
+		a {
+			@extend .button;
+			@extend .half;
+
+			font-size: 1.10em;
+
+			border-width: 0.25rem 0.2rem 0.25rem 0.2rem;
+			border-style: solid;
+			border-color: $white;
+
+			padding: 0.75rem 0.25rem 0.75rem 0.25rem;
+
+			vertical-align: middle;
+		}
+
+		a.image {
+			padding: 0;
+		}
+
+	}
+
+}

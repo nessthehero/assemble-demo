@@ -1,0 +1,41 @@
+.masthead {
+	overflow: hidden;
+	clear: both;
+
+	&.green-caption {
+		background-color: $green-bg-color;
+	}
+
+	&.blue-caption {
+		background-color: $blue-bg-color;
+	}
+
+	h2,
+	.heading {
+		font-family: $serif;
+		font-size: rem-calc(25);
+		line-height: 1.8rem;
+		margin: 0;
+		color: $white;
+		font-weight: 300;
+		display: block;
+	}
+
+	.pre-heading {
+		text-transform: uppercase;
+		font-weight: 700;
+		display: block;
+	}
+
+	h2,
+	p,
+	.heading,
+	.pre-heading {
+		color: $white;
+	}
+
+	&.bottom {
+		margin-bottom: 1em;
+	}
+
+}

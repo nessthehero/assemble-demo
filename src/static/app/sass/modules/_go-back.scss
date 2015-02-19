@@ -1,0 +1,52 @@
+.go-back {
+
+	margin: 0.5em 0;
+	position: relative;
+
+	a:link {
+
+		@extend %transition-all-slow;
+
+		text-decoration: none;
+
+		.go-back-label {
+			padding-left: em-calc(20);
+		}
+
+		&:before {
+			@extend %transition-all-slow;
+			background-image: url(i/icon-back-arrow.png);
+			background-repeat: no-repeat;
+			background-size: em-calc(10) em-calc(13);
+			width: em-calc(10);
+			height: em-calc(13);
+			display: block;
+			content: "";
+			position: absolute;
+			top: 0.29em;
+		}
+
+		&:hover {
+			text-decoration: underline;
+			&:before {
+				left: -0.25em;
+			}
+		}
+
+	}
+
+	&.go-back-top {
+		display: none;
+		@include bp (medium-up) {
+			display: block;
+		}
+	}
+
+	&.go-back-bottom {
+		margin: 1.5em 0;
+		@include bp (medium-up) {
+			display: none;
+		}
+	}
+
+}

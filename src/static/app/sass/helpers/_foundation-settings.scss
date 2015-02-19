@@ -1,0 +1,54 @@
+//@import "../../bower_components/foundation/scss/foundation/functions";
+
+// add in the foundation functions we need to update to use em
+
+$rem-base: 16px !default;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// CONVERT TO REM
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  	$value: strip-unit($value) / strip-unit($base-value) * 1em;
+  	@if ($value == 0em) { $value: 0; } // Turn 0rem into 0
+  	@return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  	$max: length($values);
+
+  	@if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  	$remValues: ();
+  	@for $i from 1 through $max {
+    	$remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  	}
+  	@return $remValues;
+}
+
+// OLD EM CALC
+// Deprecated: We'll drop support for this in 5.1.0, use rem-calc()
+@function emCalc($values){
+  	@return rem-calc($values);
+}
+
+// OLD EM CALC
+// Deprecated: We'll drop support for this in 5.1.0, use rem-calc()
+@function em-calc($values){
+  	@return rem-calc($values);
+}
+
+// Here we define the lower and upper bounds for each media size
+$small-range: (0em, em-calc(760));
+$medium-range: (em-calc(760), em-calc(1200)); // changed from default (760, 820)
+$large-range: (em-calc(820), em-calc(910));
+$xlarge-range: (em-calc(910), em-calc(980));
+$xxlarge-range: (em-calc(980), em-calc(1000));
+
+$row-width: em-calc(1000px);
+$row-gutter: em-calc(15);
+$column-gutter: em-calc(15);
+
+// $button-margin-bottom: rem-calc(0);
+$button-margin-bottom: 0;

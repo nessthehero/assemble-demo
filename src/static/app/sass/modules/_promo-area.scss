@@ -1,0 +1,32 @@
+.promo-area {
+
+	@extend %promo-area;
+
+	position: relative;
+
+	.promo-area-caption {
+		@extend %transition-all;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	a:hover {
+		.promo-area-caption {
+			background-color: #283a97;
+		}
+	}
+
+}
+
+%promo-area {
+
+	margin: 0 auto;
+	max-width: $small-module-max-width;
+
+}

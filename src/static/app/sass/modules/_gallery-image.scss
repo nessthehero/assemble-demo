@@ -1,0 +1,20 @@
+.gallery-image {
+
+	letter-spacing: normal;
+	word-spacing: normal;
+
+	a {
+		display: block
+	}
+
+	a:hover {
+		img {
+			opacity: 0.9;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+}

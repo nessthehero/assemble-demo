@@ -1,0 +1,39 @@
+.button-group {
+
+	//padding: 0 1rem;
+	clear: both;
+	margin: 0;
+
+	> h2 {
+		font-weight: bold;
+		color: $lighter-black;
+		margin-bottom: 0.25em;
+	}
+
+	> ul {
+		@include block-grid(1, 0.75em);
+		@include bp(medium-up) {
+			@include block-grid(2, 0.75em);
+		}
+		@include bp(large-up) {
+			@include block-grid(3, 0.75em);
+		}
+	}
+
+	li {
+		list-style: none;
+		text-indent: 0;
+		&:before {
+			content: '';
+		}
+	}
+
+	a {
+		@extend .button;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		width: 100%;
+		padding: 1.35rem 1rem;
+	}
+
+}

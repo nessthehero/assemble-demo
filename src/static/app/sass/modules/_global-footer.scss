@@ -1,0 +1,49 @@
+.global-footer {
+
+	position: relative;
+	background-color: $dark-blue-bg-color;
+	color: $white;
+	font-family: $default-font;
+	padding: 0.5em 1em;
+	font-size: 0.9rem;
+	margin-top: 2rem;
+
+	a {
+		color: $tangerineYellow;
+	}
+	a:link {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.logos {
+		padding: 0.5em 0 1.5em 0;
+		text-align: center;
+
+		@include bp (medium-up) {
+			text-align: left;
+		}
+	}
+
+	img {
+		// padding-right: 2em;
+		padding: 1em;
+		display: inline-block;
+		vertical-align: middle;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	.address,
+	.copyright {
+		padding-bottom: 0.5em;
+	}
+
+	@include bp (large-up) {
+		padding: 0.5em 0 2em;
+	}
+
+}

@@ -1,0 +1,68 @@
+---
+title: "Global Header"
+layout: module.hbs
+module: true
+---
+
+<header id="js-global-header" class="global-header row" role="banner">
+
+    <div class="columns">
+
+        <img src="img/logo.png" alt="Just like me! Teens with IBD" />
+
+        <a id="js-global-navigation-toggle-btn" class="button small global-navigation-toggle-btn is-open" href="js-global-navigation">
+            Menu
+        </a>
+
+        <nav id="js-global-navigation" class="global-navigation">
+
+            <ul>
+                <li>
+                    <a href="#" title="About UC &amp; Crohn's" class="global-navigation-button is-active">
+                        About <span class="global-navigation-button-break">UC &amp; Crohn's</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Life with UC &amp; Crohn's" class="global-navigation-button">
+                        Life with <span class="global-navigation-button-break">UC &amp; Crohn's</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Treatment &amp; Research" class="global-navigation-button">
+                        Treatment &amp; <span class="global-navigation-button-break">Research</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Connect &amp; Get Involved" class="global-navigation-button">
+                        Connect &amp; <span class="global-navigation-button-break">Get Involved</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Events &amp; News" class="global-navigation-button">
+                        Events <span class="global-navigation-button-break">&amp; News</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="For Parents" class="global-navigation-button global-navigation-button-secondary">
+                        <span>For</span> Parents
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="header-search">
+            <form action="/kids-teens/search-results.html" id="headerSearch" method="get" name="headerSearch" role="search">
+                <label for="search">Search CCFA</label>
+                <input name="q" placeholder="Search" type="search" />
+                <input class="ir btn-search-small submit" type="submit" value="Submit" />
+            </form>
+        </div>
+
+        <a href="#" title="For Parents" class="for-parents-button">
+            For Parents
+        </a>
+
+    </div>
+
+</header>
